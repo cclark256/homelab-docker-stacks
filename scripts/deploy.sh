@@ -10,3 +10,4 @@ docker-compose up -d
 echo "Deployment complete!"
 echo "NGINX Proxy Manager: http://localhost:81"
 echo "Uptime Kuma: http://localhost:3001"
+echo "Portainer: http://localhost:9000"

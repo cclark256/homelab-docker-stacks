@@ -19,3 +19,8 @@ networks:
   homelab:
     name: homelab
     driver: bridge
+
+  portainer:
+    extends:
+      file: ./services/storage/portainer/docker-compose.yml
+      service: portainer
