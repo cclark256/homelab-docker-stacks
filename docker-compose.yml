@@ -1,0 +1,21 @@
+version: '3.8'
+
+# Main homelab stack
+# This file can be used to deploy core services together
+
+services:
+  # Core network setup
+  nginx-proxy-manager:
+    extends:
+      file: ./services/networking/nginx-proxy-manager/docker-compose.yml
+      service: nginx-proxy-manager
+
+  uptime-kuma:
+    extends:
+      file: ./services/monitoring/uptime-kuma/docker-compose.yml
+      service: uptime-kuma
+
+networks:
+  homelab:
+    name: homelab
+    driver: bridge
